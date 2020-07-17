@@ -17,7 +17,7 @@ const PostList = () => {
         setLoading(false);
       })
       .catch((err) => console.log(err));
-  });
+  }, []);
 
   return (
     <div className='container'>
@@ -30,6 +30,7 @@ const PostList = () => {
               <PostCard
                 title={entities.decode(post.title)}
                 timestamp={post.timestamp}
+                slug={post.slug}
               ></PostCard>
             ))}
           </div>

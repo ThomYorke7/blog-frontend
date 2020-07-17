@@ -1,12 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 
-const PostCard = ({ title, timestamp }) => {
+const PostCard = ({ title, timestamp, slug }) => {
   return (
     <div className='post-preview'>
-      <a href='/'>
-        <h2>{title}</h2>
-      </a>
-      <p className='post-meta'>Posted on {timestamp}</p>
+      <Link className='post-title' to={'api/posts/' + slug}>
+        <ReactMarkdown>{title}</ReactMarkdown>
+      </Link>
+      <p className='post-meta border-bottom pb-4 muted'>
+        Posted on {timestamp}
+      </p>
     </div>
   );
 };
