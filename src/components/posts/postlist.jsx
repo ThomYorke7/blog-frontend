@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PostCard from './postcard';
-import Spinner from './spinner';
+import Spinner from '../spinner';
 import axios from 'axios';
 import { Html5Entities } from 'html-entities';
 

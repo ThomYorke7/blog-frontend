@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Navbar from './navbar';
-import Spinner from './spinner';
+import Navbar from '../navbar';
+import Spinner from '../spinner';
+import Comments from '../comments/comments';
 import ReactMarkdown from 'react-markdown';
 
 const PostPage = (props) => {
@@ -33,15 +34,14 @@ const PostPage = (props) => {
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-10'>
-              <div className='card-body'>
-                <ReactMarkdown className='card-title text-center post-title'>
-                  {decodedTitle}
-                </ReactMarkdown>
-                <ReactMarkdown
-                  className='card-text post-text mt-5'
-                  source={decodedText}
-                ></ReactMarkdown>
-              </div>
+              <ReactMarkdown className=' text-center post-title'>
+                {decodedTitle}
+              </ReactMarkdown>
+              <ReactMarkdown
+                className=' post-text mt-5 border-bottom'
+                source={decodedText}
+              ></ReactMarkdown>
+              <Comments id={post._id}></Comments>
             </div>
           </div>
         </div>

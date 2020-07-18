@@ -5,12 +5,33 @@
   background-size: cover;
   height: 550px;
 }
+
+.about-overlay {
+  background-image: url(./imgs/diary.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 550px;
+}
+
+.contact-overlay {
+  background-image: url(./imgs/hello.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 550px;
+}
+
+.about-text {
+  font-size: 20px;
+}
+
 .navbar-brand {
   font-size: 26px !important;
 }
 .nav-item {
   font-size: 20px;
-  color: #212529 !important;
+  /* color: #212529 !important; */
 }
 
 .nav-item:hover,
@@ -38,7 +59,7 @@
 }
 
 .post-text {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .post-meta {
