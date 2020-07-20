@@ -11,7 +11,7 @@ const PostList = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/posts/')
+      .get('https://denim-mighty-script.glitch.me/api/posts/')
       .then((res) => {
         setPosts(res.data);
         setLoading(false);

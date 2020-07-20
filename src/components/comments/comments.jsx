@@ -10,7 +10,7 @@ const Comments = ({ id }) => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/posts/${id}/comments`)
+      .get(`https://denim-mighty-script.glitch.me/api/posts/${id}/comments`)
       .then((res) => {
         setComments(res.data);
       })
@@ -24,7 +24,10 @@ const Comments = ({ id }) => {
       text,
     };
     axios
-      .post(`http://localhost:5000/api/posts/${id}/comments`, comment)
+      .post(
+        `https://denim-mighty-script.glitch.me/api/posts/${id}/comments`,
+        comment
+      )
       .then((res) => {
         if (res.status === 400) {
           setErrors(res);

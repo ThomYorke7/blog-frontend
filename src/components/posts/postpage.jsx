@@ -13,7 +13,10 @@ const PostPage = (props) => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/posts/' + props.match.params.slug)
+      .get(
+        'https://denim-mighty-script.glitch.me/api/posts/' +
+          props.match.params.slug
+      )
       .then((res) => {
         setPost(res.data.post);
         setDecodedTitle(res.data.decodedTitle);
