@@ -33,7 +33,10 @@ const Comments = ({ id }) => {
           setErrors(res);
           return;
         }
-        window.location.reload();
+        // setUsername('');
+        // setText('');
+        // setComments((comments) => [...comments, comment]);
+        window.location.reload(false);
       })
       .catch((err) => {
         console.log(err);

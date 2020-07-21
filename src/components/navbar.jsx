@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ mode }) => {
   return (
@@ -16,27 +17,27 @@ const Navbar = ({ mode }) => {
       </button>
       <div className='collapse navbar-collapse' id='navbarNavAltMarkup'>
         <div className='navbar-nav ml-auto'>
-          <a
+          <Link
             className='nav-item nav-link'
-            href='/'
+            to='/'
             style={mode === 'light' ? { color: 'white' } : { color: '#212529' }}
           >
             Home <span className='sr-only'>(current)</span>
-          </a>
-          <a
+          </Link>
+          <Link
             className='nav-item nav-link'
-            href='/about'
+            to='/about'
             style={mode === 'light' ? { color: 'white' } : { color: '#212529' }}
           >
             About
-          </a>
-          <a
+          </Link>
+          <Link
             className='nav-item nav-link'
-            href='/contact'
+            to='/contact'
             style={mode === 'light' ? { color: 'white' } : { color: '#212529' }}
           >
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
